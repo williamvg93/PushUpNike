@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.Location;
 
-public partial class Department
+public partial class Department : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Name { get; set; }
 
     public int FkIdCountry { get; set; }

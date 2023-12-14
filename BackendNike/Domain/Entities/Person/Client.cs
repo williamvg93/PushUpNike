@@ -6,10 +6,8 @@ using Domain.Entities.UserAuthenti;
 
 namespace Domain.Entities.Person;
 
-public partial class Client
+public partial class Client : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Code { get; set; }
 
     public string Name { get; set; }

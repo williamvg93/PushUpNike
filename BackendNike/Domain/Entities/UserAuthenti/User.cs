@@ -4,10 +4,8 @@ using Domain.Entities.Person;
 
 namespace Domain.Entities.UserAuthenti;
 
-public partial class User
+public partial class User : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Name { get; set; }
 
     public string Password { get; set; }

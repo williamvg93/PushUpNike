@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities.UserAuthenti;
 
-public partial class Token
+public partial class Token : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Code { get; set; }
 
     public DateTime CreationDate { get; set; }

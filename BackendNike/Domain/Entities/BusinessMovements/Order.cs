@@ -4,10 +4,8 @@ using Domain.Entities.Person;
 
 namespace Domain.Entities.BusinessMovements;
 
-public partial class Order
+public partial class Order : BaseEntity
 {
-    public int Id { get; set; }
-
     public DateTime CreationDate { get; set; }
 
     public int FkIdClient { get; set; }

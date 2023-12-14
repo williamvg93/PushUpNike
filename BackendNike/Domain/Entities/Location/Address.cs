@@ -4,10 +4,8 @@ using Domain.Entities.Person;
 
 namespace Domain.Entities.Location;
 
-public partial class Address
+public partial class Address : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Description { get; set; }
 
     public string Complement { get; set; }

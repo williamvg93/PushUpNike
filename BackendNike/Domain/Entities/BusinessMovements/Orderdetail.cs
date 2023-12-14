@@ -4,10 +4,8 @@ using Domain.Entities.Inventory;
 
 namespace Domain.Entities.BusinessMovements;
 
-public partial class Orderdetail
+public partial class Orderdetail : BaseEntity
 {
-    public int Id { get; set; }
-
     public int FkIdOrder { get; set; }
 
     public int FkIdProduct { get; set; }
