@@ -1,0 +1,16 @@
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(../font/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+    font-style: normal;
+}
+
+:root {
+    --pageFont : RobotoCondensed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--pageFont);
+}
