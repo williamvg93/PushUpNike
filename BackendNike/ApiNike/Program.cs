@@ -39,6 +39,8 @@ app.MapGet("/weatherforecast", () =>
 app.Run();
 
 
+/* dotnet ef dbcontext scaffold "server=localhost;database=nike;user=root;password=campus2024" Pomelo.Entity.FrameworkCore.MySql -s ApiNike -p Domain --context ApiNikeContext --context-dir Data --output-dir Entities */
+
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
