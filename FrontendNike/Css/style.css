@@ -6,6 +6,7 @@
 
 :root {
     --pageFont : RobotoCondensed;
+    --bgPage : #ffc9c9;
 }
 
 * {
@@ -13,4 +14,68 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--pageFont);
+}
+
+body {
+    display: flex;
+    background-color: var(--bgPage);
+}
+
+header {
+    background-color: var(--bgPage);
+    /* background-color: green; */
+    flex: 1 1 20%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .AsideNavcont {
+    width: 85%;
+    height: 95%;
+    background-color: #ffdede;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 6fr;
+}
+
+header .AsideNavcont .titleCont {
+    grid-row: 1;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .AsideNavcont .titleCont h1 {
+    background-color: rebeccapurple;
+}
+
+header .AsideNavcont .navLinksCont {
+    background-color: rgb(212, 240, 212);
+    grid-row: 3;
+}
+
+header .AsideNavcont .navLinksCont ul li {
+    list-style: none;
+}
+
+header .AsideNavcont .navLinksCont ul li a {
+
+}
+
+
+main {
+    background-color: var(--bgPage);
+    flex: 1 1 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .mainConta {
+    width: 90%;
+    height: 90%;
+    background-color: white;
 }
