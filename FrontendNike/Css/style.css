@@ -1,81 +1,141 @@
 @font-face {
-    font-family: RobotoCondensed;
-    src: url(../font/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
-    font-style: normal;
+  font-family: RobotoCondensed;
+  src: url(../font/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+  font-style: normal;
 }
 
 :root {
-    --pageFont : RobotoCondensed;
-    --bgPage : #ffc9c9;
+  --pageFont: RobotoCondensed;
+  --bgPage: #ffc9c9;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--pageFont);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--pageFont);
 }
 
 body {
-    display: flex;
-    background-color: var(--bgPage);
+  display: flex;
+  background-color: var(--bgPage);
 }
 
 header {
-    background-color: var(--bgPage);
-    /* background-color: green; */
-    flex: 1 1 20%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--bgPage);
+  /* background-color: green; */
+  flex: 1 1 20%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .AsideNavcont {
-    width: 85%;
-    height: 95%;
-    background-color: #ffdede;
-    display: grid;
-    grid-template-rows: 1fr 0.5fr 6fr;
+  width: 85%;
+  height: 95%;
+  background-color: #ffdede;
+  display: grid;
+  grid-template-rows: 1fr 0.3fr 6fr;
 }
 
 header .AsideNavcont .titleCont {
-    grid-row: 1;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  grid-row: 1;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .AsideNavcont .titleCont h1 {
-    background-color: rebeccapurple;
+  background-color: rebeccapurple;
 }
 
 header .AsideNavcont .navLinksCont {
-    background-color: rgb(212, 240, 212);
-    grid-row: 3;
+  background-color: rgb(212, 240, 212);
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .AsideNavcont .navLinksCont ul {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 90%;
+  display: grid;
+  gap: 1rem;
+  align-content: center;
 }
 
 header .AsideNavcont .navLinksCont ul li {
-    list-style: none;
+  list-style: none;
 }
 
 header .AsideNavcont .navLinksCont ul li a {
-
+  background-color: darkkhaki;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  gap: 0.6rem;
+  position: relative;
 }
 
+.dropdownLink:has(:checked) {
+  --rows: 1fr;
+}
+
+header .AsideNavcont .navLinksCont ul li a .dropCheck {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+header .AsideNavcont .navLinksCont ul li .dropContMenu {
+  display: grid;
+  grid-template-rows: var(--rows, 0fr);
+  transition: 0.3s grid-template-rows;
+}
+
+header .AsideNavcont .navLinksCont ul li .dropContMenu .dropSubMenu {
+  overflow: hidden;
+  /* position: absolute;
+  z-index: 999;
+  display: none; */
+}
+
+header .AsideNavcont .navLinksCont ul li .dropContMenu .dropSubMenu li {
+  width: 85%;
+  background-color: rosybrown;
+  margin-left: auto;
+}
+
+header .AsideNavcont .navLinksCont ul li .dropContMenu .dropSubMenu li a {
+  display: block;
+  padding: 1rem;
+}
+
+header .AsideNavcont .navLinksCont ul li a:hover {
+  background-color: red;
+}
+
+header .AsideNavcont .navLinksCont ul li:hover ul.dropSubMenu {
+  display: block;
+}
 
 main {
-    background-color: var(--bgPage);
-    flex: 1 1 80%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--bgPage);
+  flex: 1 1 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main .mainConta {
-    width: 90%;
-    height: 90%;
-    background-color: white;
+  width: 90%;
+  height: 90%;
+  background-color: white;
 }
